@@ -53,15 +53,15 @@
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ScreenShotImportSettings.cs" />
+    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\ScreenSpaceReflection\Editor\ScreenSpaceReflectionEditor.cs" />
     <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\SliceHelperEditor.cs" />
+    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ScreenShotHelperEditor.cs" />
+    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\DepthOfField\Editor\DepthOfFieldEditor.cs" />
+    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\TonemappingColorGrading\Editor\TonemappingColorGradingEditor.cs" />
+    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ProductManagerEditor.cs" />
     <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\BewerageMakerEditor.cs" />
     <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ProductEditor.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ScreenShotHelperEditor.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ScreenShotImportSettings.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Editor\ProductManagerEditor.cs" />
-    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\TonemappingColorGrading\Editor\TonemappingColorGradingEditor.cs" />
-    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\DepthOfField\Editor\DepthOfFieldEditor.cs" />
-    <Compile Include="Assets\Table and chair\Standard Assets\Effects\CinematicEffects(BETA)\ScreenSpaceReflection\Editor\ScreenSpaceReflectionEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -670,8 +670,14 @@
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -699,12 +705,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
