@@ -10,6 +10,7 @@ public class Interact : MonoBehaviour
 
     public GameObject breadPrefab;
     public GameObject eggPrefab;
+    public GameObject friedEggPrefab;
 
     public GameObject heldItem;
     public string heldItemName;
@@ -36,11 +37,22 @@ public class Interact : MonoBehaviour
                     stove.ToastBread();
                     PlaceHeldItem();
                 }
+                else if (heldItemName == "egg")
+                {
+                    stove.FryEgg();
+                    PlaceHeldItem();
+                }
                 else
                 {
-                    if (stove.cookedFood == "toast")
+                    if (stove.cookedFood == "toast" && stove.isCooking == false)
                     {
                         PickUpItem(breadPrefab, "toastSlice");
+                        stove.CleanStove();
+                    }
+
+                    if (stove.cookedFood == "friedEgg" && stove.isCooking == false)
+                    {
+                        PickUpItem(friedEggPrefab, "friedEgg");
                         stove.CleanStove();
                     }
                 }
@@ -53,13 +65,28 @@ public class Interact : MonoBehaviour
                     PlaceHeldItem();
                     GameObject.Find("Receivers/French Toast/bread1").SetActive(true);
                 }
+
+                if (heldItemName == "friedEgg")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/French Toast/egg").SetActive(true);
+                }
             }
         }
 
-        
+        if (Input.GetKeyDown("x"))
+        {
+            DropHeldItem();
+        }
     }
 
     private void PlaceHeldItem()
+    {
+        Destroy(heldItem);
+        heldItemName = "";
+    }
+
+    private void DropHeldItem()
     {
         Destroy(heldItem);
         heldItemName = "";
